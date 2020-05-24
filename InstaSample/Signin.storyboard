@@ -11,7 +11,7 @@
         <!--ログイン-->
         <scene sceneID="C5w-1I-g0j">
             <objects>
-                <viewController id="qjb-Q5-Hea" sceneMemberID="viewController">
+                <viewController id="qjb-Q5-Hea" customClass="SigninViewController" customModule="InstaSample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="q72-Ex-sgb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -26,12 +26,15 @@
                                 <rect key="frame" x="54" y="274" width="306" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W5j-A2-Bh8">
                                 <rect key="frame" x="147" y="413" width="119" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="ログイン"/>
+                                <connections>
+                                    <action selector="signIn" destination="qjb-Q5-Hea" eventType="touchUpInside" id="FO4-im-u99"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="アカウントをお持ちでない方はこちら" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5lF-yC-pmt">
                                 <rect key="frame" x="54" y="458" width="306" height="21"/>
@@ -58,15 +61,19 @@
                         <viewLayoutGuide key="safeArea" id="rAl-fH-JpQ"/>
                     </view>
                     <navigationItem key="navigationItem" title="ログイン" id="EzX-i8-zNU"/>
+                    <connections>
+                        <outlet property="passwordTextField" destination="cvZ-7Z-HKF" id="iKM-VS-4CH"/>
+                        <outlet property="userIDTextField" destination="K88-Qi-5Sg" id="CJh-48-8D4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HKL-T4-jxQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="734.78260869565224" y="130.58035714285714"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign Up View Controller-->
         <scene sceneID="fix-et-HXa">
             <objects>
-                <viewController id="No2-aO-MDT" sceneMemberID="viewController">
+                <viewController id="No2-aO-MDT" customClass="SignUpViewController" customModule="InstaSample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IvB-bB-uZ5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -101,6 +108,9 @@
                                 <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="新規登録"/>
+                                <connections>
+                                    <action selector="signup" destination="No2-aO-MDT" eventType="touchUpInside" id="IpY-lq-daV"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w6B-8C-yJj">
                                 <rect key="frame" x="34" y="502" width="62" height="30"/>
@@ -131,6 +141,12 @@
                         <viewLayoutGuide key="safeArea" id="rI8-Da-lB6"/>
                     </view>
                     <navigationItem key="navigationItem" id="SJd-NL-fPK"/>
+                    <connections>
+                        <outlet property="confirmTextField" destination="dcv-T2-Wor" id="yZ7-0G-UGc"/>
+                        <outlet property="emailTextField" destination="6FN-6u-k0P" id="rG5-og-UbG"/>
+                        <outlet property="passwordTextField" destination="Wf7-y9-E9A" id="D1p-oe-U4r"/>
+                        <outlet property="userIDTextField" destination="EkE-Ub-HJf" id="xgQ-95-eXd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kWC-fZ-qqw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -139,7 +155,7 @@
         <!--Navigation Controller-->
         <scene sceneID="N2g-tT-DHr">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="omd-Bf-IMg" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="RootNavigationController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="omd-Bf-IMg" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="D9q-0v-q7z">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
