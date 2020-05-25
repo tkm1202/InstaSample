@@ -46,6 +46,7 @@ class EditUserinfoViewController: UIViewController ,UITextFieldDelegate,UITextVi
         picker.dismiss(animated: true, completion: nil)
     }
     
+    
     @IBAction func selectImage(){
         let actionContoller = UIAlertController(title: "画像の選択", message: "選択してください", preferredStyle: .actionSheet)
         let cameraAction = UIAlertAction(title: "カメラ", style: .default) { (action) in
