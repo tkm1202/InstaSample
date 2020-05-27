@@ -8,6 +8,7 @@
 
 import UIKit
 import NCMB
+import NYXImagesKit
 
 class EditUserinfoViewController: UIViewController ,UITextFieldDelegate,UITextViewDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate{
     
@@ -41,11 +42,12 @@ class EditUserinfoViewController: UIViewController ,UITextFieldDelegate,UITextVi
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         let selectedImage = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
-        userImageView.image = selectedImage
+        let resizedImage = selectedImage.scale(byFactor: 0.4)
+        userImageView.image = resizedImage
         
         picker.dismiss(animated: true, completion: nil)
         
-        let file = NCMBFile.file(with: selectedImage.pngData()) as! NCMBFile
+        let file = NCMBFile.file(with: resizedImage!.pngData()) as! NCMBFile
         file.saveInBackground({ (error) in
             if error != nil{
                 print(error)
