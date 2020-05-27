@@ -44,6 +44,18 @@ class EditUserinfoViewController: UIViewController ,UITextFieldDelegate,UITextVi
         userImageView.image = selectedImage
         
         picker.dismiss(animated: true, completion: nil)
+        
+        let file = NCMBFile.file(with: selectedImage.pngData()) as! NCMBFile
+        file.saveInBackground({ (error) in
+            if error != nil{
+                print(error)
+            }else{
+                self.userImageView.image = selectedImage
+            }
+        }) { (progress) in
+            print(progress)
+        }
+            
     }
     
     
