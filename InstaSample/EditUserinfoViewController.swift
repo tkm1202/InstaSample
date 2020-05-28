@@ -24,9 +24,46 @@ class EditUserinfoViewController: UIViewController ,UITextFieldDelegate,UITextVi
         userIDTextField.delegate = self
         introductionTextView.delegate = self
         // Do any additional setup after loading the view.
+        userImageView.layer.cornerRadius = userImageView.bounds.width / 2.0
+        userImageView.layer.masksToBounds = true
         
-        let userID = NCMBUser.current()?.userName
-        userIDTextField.text = userID
+        
+     //   let userID = NCMBUser.current()?.userName
+       // userIDTextField.text = userID
+        
+        
+        if let user = NCMBUser.current(){
+            userNameTextField.text = user.object(forKey: "displayName") as? String
+            userIDTextField.text = user.userName
+            introductionTextView.text = user.object(forKey: "introduction") as? String
+            
+            
+            
+            let file = NCMBFile.file(withName: user.objectId, data: nil) as! NCMBFile
+                   
+                   file.getDataInBackground { (data, error) in
+                       if error != nil{
+                           print(error)
+                       }else{
+                           if data != nil{
+                               let image = UIImage(data: data!)
+                               self.userImageView.image = image
+                           }
+                       }
+                   }
+        }else{
+            //ログアウト成功
+                       let storyboaed = UIStoryboard(name: "Signin", bundle: Bundle.main)
+                       let rootViewController = storyboaed.instantiateViewController(withIdentifier: "RootNavigationController")
+                       UIApplication.shared.keyWindow?.rootViewController = rootViewController
+                                          
+                       //ログアウト状態の保持
+                       let ud = UserDefaults.standard
+                       ud.set(false, forKey: "isLogin")
+                       ud.synchronize()
+        }
+        
+        
     }
     
 
@@ -47,7 +84,7 @@ class EditUserinfoViewController: UIViewController ,UITextFieldDelegate,UITextVi
         
         picker.dismiss(animated: true, completion: nil)
         
-        let file = NCMBFile.file(with: resizedImage!.pngData()) as! NCMBFile
+        let file = NCMBFile.file(withName: NCMBUser.current()?.objectId, data: resizedImage!.pngData()) as! NCMBFile
         file.saveInBackground({ (error) in
             if error != nil{
                 print(error)
@@ -99,5 +136,19 @@ class EditUserinfoViewController: UIViewController ,UITextFieldDelegate,UITextVi
     
     @IBAction func closeEditViewController(){
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func saveUserInfo(){
+        let user = NCMBUser.current()
+        user?.setObject(userNameTextField.text, forKey: "displayName")
+        user?.setObject(userIDTextField.text, forKey: "userName")
+        user?.setObject(introductionTextView.text, forKey: "introduction")
+        user?.saveInBackground({ (error) in
+            if error != nil{
+                print(error)
+            }else{
+                self.dismiss(animated: true, completion: nil)
+            }
+        })
     }
 }
