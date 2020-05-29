@@ -23,6 +23,8 @@
 		C32A78CB24799974008A72C6 /* UserPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32A78CA24799974008A72C6 /* UserPageViewController.swift */; };
 		C32A78CD2479A991008A72C6 /* EditUserinfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32A78CC2479A991008A72C6 /* EditUserinfoViewController.swift */; };
 		C3F86FC7248021960075DE1A /* placeholder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C3F86FC6248021960075DE1A /* placeholder.jpg */; };
+		C3F86FCA248033FA0075DE1A /* TimelineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F86FC8248033FA0075DE1A /* TimelineTableViewCell.swift */; };
+		C3F86FCB248033FA0075DE1A /* TimelineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3F86FC9248033FA0075DE1A /* TimelineTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		C32A78CA24799974008A72C6 /* UserPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPageViewController.swift; sourceTree = "<group>"; };
 		C32A78CC2479A991008A72C6 /* EditUserinfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserinfoViewController.swift; sourceTree = "<group>"; };
 		C3F86FC6248021960075DE1A /* placeholder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = placeholder.jpg; sourceTree = "<group>"; };
+		C3F86FC8248033FA0075DE1A /* TimelineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineTableViewCell.swift; sourceTree = "<group>"; };
+		C3F86FC9248033FA0075DE1A /* TimelineTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimelineTableViewCell.xib; sourceTree = "<group>"; };
 		D2669AA7B07424A3B811F489 /* Pods_InstaSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstaSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF39371B0764186D0D5057B8 /* Pods-InstaSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaSample.debug.xcconfig"; path = "Target Support Files/Pods-InstaSample/Pods-InstaSample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -94,6 +98,8 @@
 				C32A78A124796D3B008A72C6 /* ViewController.swift */,
 				C32A78C624798593008A72C6 /* SignUpViewController.swift */,
 				C32A78C82479956D008A72C6 /* SigninViewController.swift */,
+				C3F86FC8248033FA0075DE1A /* TimelineTableViewCell.swift */,
+				C3F86FC9248033FA0075DE1A /* TimelineTableViewCell.xib */,
 				C32A78A324796D3B008A72C6 /* Main.storyboard */,
 				C32A78CC2479A991008A72C6 /* EditUserinfoViewController.swift */,
 				C32A78CA24799974008A72C6 /* UserPageViewController.swift */,
@@ -188,6 +194,7 @@
 			files = (
 				C32A78C52479795E008A72C6 /* Signin.storyboard in Resources */,
 				C32A78BD247976B0008A72C6 /* search@2x.png in Resources */,
+				C3F86FCB248033FA0075DE1A /* TimelineTableViewCell.xib in Resources */,
 				C32A78BF247976C6008A72C6 /* add@2x in Resources */,
 				C32A78C1247976CB008A72C6 /* profile@2x in Resources */,
 				C3F86FC7248021960075DE1A /* placeholder.jpg in Resources */,
@@ -247,6 +254,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3F86FCA248033FA0075DE1A /* TimelineTableViewCell.swift in Sources */,
 				C32A78C92479956D008A72C6 /* SigninViewController.swift in Sources */,
 				C32A78C724798593008A72C6 /* SignUpViewController.swift in Sources */,
 				C32A78CB24799974008A72C6 /* UserPageViewController.swift in Sources */,
