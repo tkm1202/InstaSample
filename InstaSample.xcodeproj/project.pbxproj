@@ -22,6 +22,7 @@
 		C32A78C92479956D008A72C6 /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32A78C82479956D008A72C6 /* SigninViewController.swift */; };
 		C32A78CB24799974008A72C6 /* UserPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32A78CA24799974008A72C6 /* UserPageViewController.swift */; };
 		C32A78CD2479A991008A72C6 /* EditUserinfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32A78CC2479A991008A72C6 /* EditUserinfoViewController.swift */; };
+		C39A2D0D2482D01900905EDD /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39A2D0C2482D01900905EDD /* PostViewController.swift */; };
 		C3F86FC7248021960075DE1A /* placeholder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C3F86FC6248021960075DE1A /* placeholder.jpg */; };
 		C3F86FCA248033FA0075DE1A /* TimelineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F86FC8248033FA0075DE1A /* TimelineTableViewCell.swift */; };
 		C3F86FCB248033FA0075DE1A /* TimelineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3F86FC9248033FA0075DE1A /* TimelineTableViewCell.xib */; };
@@ -45,6 +46,7 @@
 		C32A78C82479956D008A72C6 /* SigninViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
 		C32A78CA24799974008A72C6 /* UserPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPageViewController.swift; sourceTree = "<group>"; };
 		C32A78CC2479A991008A72C6 /* EditUserinfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserinfoViewController.swift; sourceTree = "<group>"; };
+		C39A2D0C2482D01900905EDD /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		C3F86FC6248021960075DE1A /* placeholder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = placeholder.jpg; sourceTree = "<group>"; };
 		C3F86FC8248033FA0075DE1A /* TimelineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineTableViewCell.swift; sourceTree = "<group>"; };
 		C3F86FC9248033FA0075DE1A /* TimelineTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimelineTableViewCell.xib; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				C3F86FC9248033FA0075DE1A /* TimelineTableViewCell.xib */,
 				C32A78A324796D3B008A72C6 /* Main.storyboard */,
 				C32A78CC2479A991008A72C6 /* EditUserinfoViewController.swift */,
+				C39A2D0C2482D01900905EDD /* PostViewController.swift */,
 				C32A78CA24799974008A72C6 /* UserPageViewController.swift */,
 				C32A78A624796D3E008A72C6 /* Assets.xcassets */,
 				C32A78C42479795E008A72C6 /* Signin.storyboard */,
@@ -254,6 +257,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C39A2D0D2482D01900905EDD /* PostViewController.swift in Sources */,
 				C3F86FCA248033FA0075DE1A /* TimelineTableViewCell.swift in Sources */,
 				C32A78C92479956D008A72C6 /* SigninViewController.swift in Sources */,
 				C32A78C724798593008A72C6 /* SignUpViewController.swift in Sources */,
